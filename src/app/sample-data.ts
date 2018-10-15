@@ -1,4 +1,7 @@
-export const videos = [
+import { Video } from './app.types';
+import { VideoDetailsArray } from './app.types';
+
+export const videos= [
     {
       "title": "Angular Observable Data Flow",
       "author": "Kyle Cordes",

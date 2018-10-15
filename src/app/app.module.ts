@@ -7,6 +7,11 @@ import { VideoEmbedderComponent } from './video-embedder/video-embedder.componen
 import { ViewBreakdownComponent } from './view-breakdown/view-breakdown.component';
 import { ViewFilterComponent } from './view-filter/view-filter.component';
 
+import { MatCardModule } from '@angular/material/card';
+import { MatDividerModule } from '@angular/material/divider';
+import { MatListModule } from '@angular/material/list';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -16,7 +21,10 @@ import { ViewFilterComponent } from './view-filter/view-filter.component';
     ViewFilterComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    MatCardModule,
+    MatDividerModule,
+    MatListModule
   ],
   providers: [],
   bootstrap: [AppComponent]

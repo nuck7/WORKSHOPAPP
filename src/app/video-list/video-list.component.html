@@ -1,3 +1,8 @@
-<ul>
-    <li *ngFor="let video of videos">{{ video?.title }} - {{ video?.author }}</li>
-</ul>
+<mat-card class="example-card">
+  <mat-list>
+      <mat-list-item *ngFor="let video of videos" (click)="selectedVideo = video" [class.active]="selectedVideo?.id === video.id">{{ video?.title }} - {{ video?.author }}</mat-list-item>  
+      <mat-divider class="divider"></mat-divider>
+
+  </mat-list>
+
+</mat-card>

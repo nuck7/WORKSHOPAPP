@@ -1,0 +1,11 @@
+.example-card {
+    max-width: 400px;
+  }
+
+  .mat-divider-horizontal {
+    max-width: 400px;
+    align-content: center;
+    color: lightgray;
+    position: inherit;
+    left: auto;
+  }
