@@ -1,13 +1,12 @@
-export interface VideoDetailsArray {
+export interface VideoDetails {
     age: number;
     region: string;
     date: string;
-}
-
-export interface Video {
+  }
+  
+  export interface Video {
     title: string;
     id: string;
     author: string;
-    viewDetails: VideoDetailsArray;
-}
-
+    viewDetails: VideoDetails[];
+  }

@@ -1,7 +1,12 @@
 <mat-card class="example-card">
   <mat-list>
-      <mat-list-item *ngFor="let video of videos" (click)="selectedVideo = video" [class.active]="selectedVideo?.id === video.id">{{ video?.title }} - {{ video?.author }}</mat-list-item>  
-      <mat-divider class="divider"></mat-divider>
+      <mat-list-item *ngFor="let video of videos" 
+      (click)="videoClicked(video)"
+      [class.active]="selectedVideo?.id === video.id">
+          <app-video-preview [video]="video"></app-video-preview>
+      <mat-divider class="divider">
+      </mat-divider>
+    </mat-list-item>  
 
   </mat-list>
 
