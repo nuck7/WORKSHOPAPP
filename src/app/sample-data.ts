@@ -1,4 +1,4 @@
-import { Video } from './app.types';
+/*import { Video } from './app.types';
 
 export const videos: Video[] = [
   {
@@ -186,4 +186,4 @@ export const videos: Video[] = [
       }
     ]
   }
-];
+];*/

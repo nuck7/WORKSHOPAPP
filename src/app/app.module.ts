@@ -12,6 +12,11 @@ import { MatCardModule } from '@angular/material/card';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatListModule } from '@angular/material/list';
 import { HttpClientModule } from '@angular/common/http';
+import { ReactiveFormsModule } from '@angular/forms';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { AppRoutingModule } from './app-routing.module';
+import { AppState, filterReducer, videoListReducer, selectedVideoIdReducer } from './state';
+import { StoreModule } from '@ngrx/store';
 
 @NgModule({
   declarations: [
@@ -20,14 +25,23 @@ import { HttpClientModule } from '@angular/common/http';
     VideoEmbedderComponent,
     ViewBreakdownComponent,
     ViewFilterComponent,
-    VideoPreviewComponent
+    VideoPreviewComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
     MatCardModule,
     MatDividerModule,
     MatListModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule,
+    AppRoutingModule,
+    StoreModule.forRoot<AppState>({
+      videoList: videoListReducer,
+      selectedVideoId: selectedVideoIdReducer,
+      filter: filterReducer,
+      
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]

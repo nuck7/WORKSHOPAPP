@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { Filter, VideoDetails } from '../app.types';
 
 @Component({
   selector: 'app-view-breakdown',
@@ -6,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./view-breakdown.component.css']
 })
 export class ViewBreakdownComponent implements OnInit {
+  @Input() views: VideoDetails[];
 
   constructor() { }
 
